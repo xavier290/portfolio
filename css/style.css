@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 :root {
-  --orange: #ba5536;
-  --hover: #e65f36;
+  --orange: #ff8362;
+  --hover: #db6d42;
   --black: #373234;
-  --colorFont: #ffff;
 }
 
 * {
@@ -35,29 +35,30 @@ body::-webkit-scrollbar-thumb {
 .container {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(to right, var(--black) 20%, white 20%);
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, var(--orange) 50%, white 50%);
 }
 
 header {
+  font-family: "Syne Mono", monospace;
   width: 100%;
   position: relative;
   height: 14vh;
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 50% 50%;
   place-items: center;
 }
 
-.title {
+.logo {
   z-index: 10;
 }
 
-.title h1 {
-  font-family: "Syne Mono", monospace;
-  font-weight: 400;
-}
-
-.title a {
-  color: var(--colorFont);
+.logo a {
+  color: black;
   text-decoration: none;
 }
 
@@ -67,13 +68,14 @@ header {
   right: 0;
   min-height: 110vh;
   width: 0;
-  background: var(--black);
+  background: white;
   overflow: hidden;
   z-index: 4;
-  transition: all 200ms cubic-bezier(0.9, 1, 1, 1);
+  transition: all 0.4s;
   white-space: nowrap;
   display: flex;
 }
+
 .menu ul {
   width: 100%;
   display: flex;
@@ -81,19 +83,22 @@ header {
   align-items: center;
   justify-content: center;
 }
+
 .menu li {
   list-style: none;
   text-align: center;
   margin: 0;
   margin-bottom: 40px;
 }
+
 .menu a {
-  color: var(--colorFont);
+  color: black;
   text-decoration: none;
-  font-size: 46px;
+  font-size: 40px;
   font-family: "Montserrat", sans-serif;
-  font-weight: bold;
+  font-weight: 500;
 }
+
 .toggle {
   width: 100%;
 }
@@ -106,20 +111,18 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
   right: 6%;
   z-index: 10;
-  background: var(--black);
-  border-radius: 50px;
 }
 
 .menu-btn-burguer {
   width: 30px;
   height: 5px;
-  background: white;
+  background: black;
   border-radius: 5px;
 }
 
@@ -130,9 +133,8 @@ header {
   width: 30px;
   height: 5px;
   border-radius: 5px;
-  background: white;
+  background: black;
   transition: all 0.4s ease-in-out;
-  left: 10px;
 }
 
 .menu-btn-burguer::before {
@@ -157,12 +159,22 @@ header {
   transform: rotate(-45deg) translate(35px, 35px);
 }
 
-a {
-  transition: all 0.4s;
+.intro {
+  width: 100%;
+  height: 86vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-a:hover {
-  color: var(--hover);
+.intro h1 {
+  font-size: 100px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+}
+
+.intro span {
+  color: var(--orange);
 }
 
 main {
@@ -174,145 +186,96 @@ section {
   display: block;
 }
 
+p {
+  margin-bottom: 4px;
+}
+
 .cnt {
   margin: 0 auto;
 }
 
-.home {
-  width: 80%;
-  max-width: 1200px;
-  height: 76vh;
-  display: flex;
-  text-align: left;
-  flex-direction: column;
-  background: #dbdbdbe0;
-  justify-content: center;
-  padding: 4%;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bolder;
-  margin-bottom: 10vh;
-  position: relative;
-}
-
-.home h1 {
-  font-size: 52px;
-}
-
-.home p {
-  font-size: 22px;
-  margin-left: 2px;
-}
-
-.home img {
-  position: absolute;
-  right: 4%;
-  bottom: 4%;
-  width: 200px;
-}
-
-.about {
+#about {
   width: 100%;
   height: 100vh;
-  background: white;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-}
-
-.row {
-  display: flex;
-  flex-basis: 50%;
-  align-items: center;
-  justify-content: center;
-}
-
-.about img {
-  width: 80%;
-  height: 40%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  border: none;
-}
-
-.about-content {
-  padding-left: 6%;
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bolder;
+  padding: 5%;
 }
 
-.about-content h1 {
+.about-content h2 {
   font-family: "Syne Mono", monospace;
-  font-weight: 400;
-  font-size: 40px;
+  font-size: 36px;
 }
 
 .about-content p {
-  margin-bottom: 5px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
-.projects {
+#skills {
   width: 100%;
   height: 100vh;
-  background: white;
+  padding: 5%;
   display: flex;
   flex-direction: column;
-  padding: 3%;
-  font-family: "Syne Mono", monospace;
-  font-weight: 400;
+  justify-content: center;
 }
 
-.contact {
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(to bottom, white 40%, var(--black) 40%);
-  position: relative;
-  display: grid;
-  grid-template-rows: 40% 60%;
-}
-
-.contact .contact-content {
-  grid-row: 2;
-  margin: 3%;
-  font-family: "Syne Mono", monospace;
+.skills-img {
   display: grid;
   grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  place-items: center;
 }
 
-.contact-content h2 {
-  color: var(--colorFont);
-  font-size: 20px;
-  font-weight: 400;
+.title {
+  margin-bottom: 10px;
+}
+
+.title h2 {
+  font-family: "Syne Mono", monospace;
+  font-size: 36px;
+}
+
+.skills-img img {
+  width: 100px;
+  margin: 10px;
+}
+
+#Projects {
+  width: 100%;
+  height: 100vh;
+  padding: 5%;
+}
+
+#contact {
+  width: 100%;
+  height: 60vh;
+  background: linear-gradient(to bottom, white 30%, var(--black) 30%);
+  display: grid;
+  grid-template-rows: 30% 70%;
+  padding: 5%;
+}
+
+.contact-content {
+  grid-row: 2;
+  display: grid;
+  grid-template-rows: 20% 80%;
+}
+
+.contact-content .title h2 {
+  color: white;
+}
+
+.main-content {
+  display: flex;
+  color: white;
+}
+
+.main-content img {
+  width: 35px;
 }
 
 .social-media {
-  padding: 3%;
-}
-
-.social-media img {
-  width: 35px;
-  height: 35px;
-  margin: 5px;
-}
-
-.email {
-  padding: 3%;
-}
-
-.email h4 {
-  color: var(--colorFont);
-  font-family: "Montserrat", sans-serif;
-  margin-top: 5px;
-}
-
-.email h3 {
-  color: var(--colorFont);
-  font-family: "Montserrat", sans-serif;
-  position: absolute;
-  bottom: 8%;
+  padding-right: 4%;
 }
