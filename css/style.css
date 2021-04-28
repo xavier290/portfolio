@@ -20,7 +20,6 @@ body {
 
 body::-webkit-scrollbar {
   width: 10px;
-  height: 5px;
 }
 
 body::-webkit-scrollbar-track {
@@ -30,6 +29,15 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: var(--orange);
   border-radius: 20px;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+}
+
+h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
 
 .container {
@@ -218,7 +226,11 @@ p {
 }
 
 .about-content p {
-  font-size: 20px;
+  font-size: 18px;
+}
+
+#about img {
+  display: none;
 }
 
 #skills {
@@ -230,7 +242,7 @@ p {
   justify-content: center;
 }
 
-.skills-img {
+.skills-icons {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 50% 50%;
@@ -246,7 +258,7 @@ p {
   font-size: 36px;
 }
 
-.skills-img img {
+.skills-icons img {
   width: 100px;
   margin: 10px;
 }
@@ -264,32 +276,36 @@ p {
   display: grid;
   grid-template-rows: 30% 70%;
   padding: 5%;
+  color: white;
 }
 
-.contact-content {
-  grid-row: 2;
+#contact .title {
+  margin-bottom: 5px;
+}
+
+#contact .contact-content {
   display: grid;
-  grid-template-rows: 20% 80%;
+  grid-template-columns: 50% 50%;
 }
 
-.contact-content .title h2 {
-  color: white;
+#contact .content {
+  grid-row: 2;
 }
 
-.main-content {
-  display: flex;
-  color: white;
+#contact .social-media {
+  margin-right: 8px;
 }
 
-.main-content img {
+#contact .contact-content img {
   width: 35px;
 }
 
-.social-media {
+#contact h4 {
   padding-right: 4%;
+  margin-bottom: 10px;
 }
 
-/* tablet size homepage */
+/* tablet size home section */
 
 @media all and (min-width: 768px) {
   .home {
@@ -375,7 +391,7 @@ p {
   }
 }
 
-/* Computer size homepage */
+/* Computer size home section */
 
 @media all and (min-width: 1200px) {
   .home {
@@ -385,6 +401,70 @@ p {
   .intro h1 {
     font-size: 160px;
   }
+  .language {
+    left: -3.5%;
+  }
 }
 
-/* tablet sixe about page */
+/* tablet size about page */
+@media all and (min-width: 768px) {
+  #about {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    place-items: center;
+  }
+  #about img {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media all and (min-height: 1024px) and (max-width: 1024px) {
+  #about {
+    grid-template-columns: 100%;
+  }
+  #about img {
+    display: none;
+  }
+  .about-content h2 {
+    font-size: 60px;
+  }
+  .about-content p {
+    font-size: 26px;
+  }
+}
+
+/* computer size about section */
+@media all and (min-width: 1200px) {
+  .about-content h2 {
+    font-size: 40px;
+  }
+  .about-content p {
+    font-size: 22px;
+  }
+}
+
+/* tablet and computer skills section */
+@media all and (min-width: 768px) {
+  #skills {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    place-items: center;
+  }
+  #skills h2 {
+    font-size: 40px;
+  }
+  #skills p {
+    font-size: 22px;
+  }
+  .skills-icons img {
+    width: 140px;
+  }
+}
+
+/* tablet and computer size contact section */
+@media all and (min-width: 768px) {
+  #contact h4 {
+    font-size: 18px;
+  }
+}
