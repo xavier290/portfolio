@@ -33,6 +33,7 @@ body::-webkit-scrollbar-thumb {
 
 p {
   font-family: "Montserrat", sans-serif;
+  margin-bottom: 4px;
 }
 
 h4 {
@@ -50,6 +51,7 @@ h4 {
   width: 100%;
   height: 100vh;
   position: relative;
+  border: 25px solid #ffffff;
 }
 
 header {
@@ -68,7 +70,7 @@ header {
 }
 
 .logo a {
-  color: black;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -78,7 +80,7 @@ header {
   right: 0;
   min-height: 100vh;
   width: 0;
-  background: white;
+  background: #ffffff;
   overflow: hidden;
   z-index: 4;
   transition: all 0.4s;
@@ -102,7 +104,7 @@ header {
 }
 
 .menu a {
-  color: black;
+  color: #000000;
   text-decoration: none;
   font-size: 40px;
   font-family: "Montserrat", sans-serif;
@@ -132,7 +134,7 @@ header {
 .menu-btn-burguer {
   width: 30px;
   height: 5px;
-  background: black;
+  background: #000000;
   border-radius: 5px;
 }
 
@@ -143,7 +145,7 @@ header {
   width: 30px;
   height: 5px;
   border-radius: 5px;
-  background: black;
+  background: #000000;
   transition: all 0.4s ease-in-out;
 }
 
@@ -177,7 +179,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, var(--orange) 50%, white 50%);
+  background: linear-gradient(to right, var(--orange) 50%, #f5f5f5 50%);
 }
 
 .intro h1 {
@@ -191,7 +193,19 @@ header {
 }
 
 .language {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  position: absolute;
+  bottom: -3%;
+}
+
+.language a {
+  color: #000000;
+  text-decoration: none;
+  margin-right: 4px;
 }
 
 main {
@@ -201,10 +215,6 @@ main {
 
 section {
   display: block;
-}
-
-p {
-  margin-bottom: 4px;
 }
 
 .cnt {
@@ -324,13 +334,6 @@ p {
   }
   .menu-btn {
     right: 10%;
-  }
-  .intro {
-    background: linear-gradient(
-      to right,
-      var(--orange) 50%,
-      rgb(245, 245, 245) 50%
-    );
   }
   .intro h1 {
     font-size: 140px;
